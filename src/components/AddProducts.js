@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { db, storage } from "../config/config";
 // import {ref,uploadBytesResumable} from "firebase/storage"
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
+
 
 function AddProduct() {
   const [productName, setProductName] = useState("");
@@ -19,7 +23,15 @@ function AddProduct() {
     const uploadTask = storage
       .ref(`product-images/${productImg.name}`)
       .put(productImg);
-
+      toast.success('Product added', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    })
     uploadTask.on(
       "state_changed",
       (snapshot) => {

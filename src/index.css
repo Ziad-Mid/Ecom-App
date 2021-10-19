@@ -57,6 +57,8 @@ body {
     margin-right: 10px;
 }
 
+
+
 .navbox .rightside span .navlink {
     text-decoration: none;
     color: #000;
@@ -305,3 +307,8 @@ h1 {
 .success-msg .home-link {
     color: #fff;
 }
+
+/* Page NOT FOUND */
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }

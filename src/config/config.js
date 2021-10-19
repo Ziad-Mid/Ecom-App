@@ -2,7 +2,6 @@ import firebase from "firebase/compat";
 
 
 const firebaseConfig = {
-
 //config
 };
 

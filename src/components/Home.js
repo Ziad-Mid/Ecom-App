@@ -14,6 +14,7 @@ function Home({user}) {
             if (!user) {
                 history.push('/login');
             }
+            
         })
     })
 

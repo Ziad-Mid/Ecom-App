@@ -9,7 +9,8 @@ import {auth,db} from './config/config'
 import { CartContextProvider } from './global/CartContext';
 import Cart from './components/Cart';
 import Cashout from './components/Cashout';
-import {NotFound} from './components/NotFound'
+import NotFound from './components/NotFound'
+
 function App() {
 
   const [user, setUser] = useState(null)
@@ -39,8 +40,8 @@ function App() {
          <Route  path='/signup' component={SignUp} />
          <Route  path='/login' component={LogIn} />
          <Route path='/cartproducts' component={()=> <Cart user={user}/>}/>
-        <Route path='/cashout' component={()=> <Cashout user={user} />} />
-        <Route component={NotFound} />
+         <Route path='/cashout' component={()=> <Cashout user={user} />} />
+         <Route component={NotFound} />
        </Switch>
      </Router>
      </CartContextProvider>
